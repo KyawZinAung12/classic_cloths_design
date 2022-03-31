@@ -1,7 +1,7 @@
 
 *{
-	font-family: 'Montserrat', sans-serif;
-	/*font-weight: bold;*/
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
 }
 .logo_name{
 	color: red;
@@ -53,7 +53,9 @@
 .detail_item{
     color: black !important;
 }
-
+.dropdown-item{
+	font-size: 14px;
+}
 
 .dropdown-menu li {
   position: relative;
