@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Cloths</title>
+	<link rel="icon" href="images/logo.jpg">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			let rangeInput=document.querySelectorAll(".range_input input"),
+			priceInput=document.querySelectorAll(".price_input input"),
+			progress=document.querySelector(".slider .progress");
+			let priceGap=10000;
+
+
+			priceInput.forEach(input =>{
+				input.addEventListener("input",e =>{
+					let minVal= parseInt(priceInput[0].value),
+					maxVal=parseInt(priceInput[1].value);
+					// let percent=(minVal/rangeInput[0].max)*100;
+					// console.log(maxVal);
+					if ((maxVal-minVal >= priceGap) && maxVal <= 100000) {
+						if (e.target.className === "input_min") {
+							rangeInput[0].value=minVal;
+							progress.style.left=(minVal/rangeInput[0].max)*100 +"%";
+						}else if (e.target.className === "input_max"){
+							rangeInput[1].value=maxVal;
+							progress.style.right=100-(maxVal/rangeInput[1].max)*100 +"%";
+							
+						}
+
+					}
+				})
+			});
+			rangeInput.forEach(input =>{
+				input.addEventListener("input",e =>{
+					let minVal= parseInt(rangeInput[0].value),
+					maxVal=parseInt(rangeInput[1].value);
+					// let percent=(minVal/rangeInput[0].max)*100;
+					// console.log(percent);
+					if (maxVal - minVal < priceGap) {
+						if (e.target.className === "range_min") {
+							rangeInput[0].value=maxVal-priceGap;
+
+						}else {
+							rangeInput[1].value=minVal+priceGap;
+							
+						}
+
+					}else {
+						priceInput[0].value=minVal;
+						priceInput[1].value=maxVal;
+
+						progress.style.left=(minVal/rangeInput[0].max)*100 +"%";
+						progress.style.right=100-(maxVal/rangeInput[1].max)*100 +"%";
+					}
+					
+
+
+				})
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav class="ms-md-5 mt-2">
+	  	<div class="container-fluid">
+	  		<div class="row">
+	  			<div class="col-8 col-md-4">
+	  				<div class="logo">
+				  		<a href="index.html" class="logo_name ">Classic Cloths</a>
+				  		<p class="sub_name"><small> @Classicexportclothes  · Product/service</small></p>
+				  	</div>
+	  			</div>
+	  			<div class="col-4 d-none d-md-block">
+	  				<div class="input-group mt-2">
+		                <input class="form-control border-end-0 border search_input" type="search" placeholder="Search By Title" id="example-search-input">
+		                <span class="input-group-append">
+		                    <button class="btn bg-white search_input  border border-start-0  ms-n5" type="button">
+		                        <img src="https://img.icons8.com/windows/20/000000/search--v1.png"/>
+		                    </button>
+		                </span>
+		            </div>
+	  			</div>
+	  			<div class="col-4">
+	  				<img src="https://img.icons8.com/pastel-glyph/25/000000/check-male.png"/ class="ms-md-5 mt-2 ps-md-5">
+	  				<img src="https://img.icons8.com/pastel-glyph/25/000000/hearts--v1.png"/ class="ms-2 mt-2 ms-md-4">
+	  				<img src="https://img.icons8.com/pastel-glyph/25/000000/shopping-trolley--v2.png"/ class="ms-2 ms-md-4 mt-2">
+	  			</div>
+	  		</div>
+		</div>
+	</nav>
+	<nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0">
+	  <div class="container-fluid ms-md-5">
+	    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	      <ul class="navbar-nav">
+	        
+	        
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Products
+	          </a>
+	          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="shop.html">T-Shirt</a></li>
+	            <li><a class="dropdown-item" href="#">Jeans</a></li>
+	            <li><a class="dropdown-item" href="#">Shorts</a></li>
+	            <li><a class="dropdown-item" href="#">Shirts</a></li>
+	            <li><a class="dropdown-item" href="#">Hoodies</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Brands
+	          </a>
+	          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="#">Levi’s Denim</a></li>
+	            <li><a class="dropdown-item" href="#"> Abercrombie</a></li>
+	            <li><a class="dropdown-item" href="#">Tommy Hilfiger</a></li>
+	            <li><a class="dropdown-item" href="#"> Bio Wash</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" aria-current="page" href="#">Promotions</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<div style="background-color: #ebebeb;">
+		<h3 class="text-center py-5">Pants</h3>
+	</div>
+
+	<div class="container my-5">
+		<div class="row">
+			<div class="col-12 col-md-3">
+				<h6>Filter</h6>
+				<h5 class="service_header">Product Types</h5>
+				<hr class="divided">
+				<div class="row">
+					<div class="col-8">
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="Jean">
+						  <label class="form-check-label" for="Jean">
+						    Jean Pants
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="Short" checked>
+						  <label class="form-check-label" for="Short">
+						    Short Pants
+						  </label>
+						</div>
+					</div>
+					<div class="col-2">
+						<p class="m-0">(1)</p>
+						<p class="m-0">(13)</p>
+					</div>
+				</div>
+
+				<h5 class="service_header mt-4">Brands</h5>
+				<hr class="divided_brand">
+				<div class="row">
+					<div class="col-8">
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="Levie">
+						  <label class="form-check-label" for="Levie">
+						    Levie
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="Hugo">
+						  <label class="form-check-label" for="Hugo">
+						    Hugo
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="Boss" checked>
+						  <label class="form-check-label" for="Boss">
+						    Boss
+						  </label>
+						</div>
+					</div>
+					<div class="col-2">
+						<p class="m-0">(1)</p>
+						<p class="m-0">(13)</p>
+						<p class="m-0">(30)</p>
+					</div>
+				</div>
+
+				<h5 class="service_header mt-4">Price(K)</h5>
+				<hr class="divided_brand">
+
+				<div class="price_input">
+					<div class="field d-inline">
+						<input type="number" class="input_min" value="0"  style="width: 35%">
+					</div>
+					<div class="separator d-inline mx-3">
+						-
+					</div>
+					<div class="field d-inline">
+						<input type="number" class="input_max" value="100000" style="width: 35%">
+					</div>
+					<div class="slider mt-3">
+						<div class="progress">							
+						</div>
+					</div>
+					<div class="range_input">
+						<input type="range"  class="range_min" min="0" max="100000" value="0" step="1000">
+						<input type="range"  class="range_max" min="0" max="100000" value="100000" step="1000">
+					</div>
+				</div>
+			</div>	
+
+			<div class="col-12 col-md-9 mt-3 mt-md-0">
+				<div class="row">
+					<div class="col">
+						<button class="btn btn-sm btn-secondary float-end">Sort By</button>						
+					</div>
+					
+				</div>
+				<br>
+				<div class="row row-cols-1 row-cols-md-5">
+				  <div class="col my-2">
+				  	<a href="detail.html"><img src="images/item2.jpg" class="img-fluid" alt="..."></a>
+			        <small>Levie</small>
+			        <h6 class="service_header">Short Pant</h6>
+			        <p>Ks 40,000</p>
+				 </div>
+				 <div class="col my-2">
+				  	<img src="images/item2.jpg" class="img-fluid" alt="...">
+			        <small>Levie</small>
+			        <h6 class="service_header">Short Pant</h6>
+			        <p>Ks 40,000</p>
+				 </div>
+				 <div class="col my-2">
+				  	<img src="images/item2.jpg" class="img-fluid" alt="...">
+			        <small>Levie</small>
+			        <h6 class="service_header">Short Pant</h6>
+			        <p>Ks 40,000</p>
+				 </div>
+				 <div class="col my-2">
+				  	<img src="images/item2.jpg" class="img-fluid" alt="...">
+			        <small>Levie</small>
+			        <h6 class="service_header">Short Pant</h6>
+			        <p>Ks 40,000</p>
+				 </div>
+				 <div class="col my-2">
+				  	<img src="images/item2.jpg" class="img-fluid" alt="...">
+			        <small>Levie</small>
+			        <h6 class="service_header">Short Pant</h6>
+			        <p>Ks 40,000</p>
+				 </div>
+				 <div class="col my-2">
+				  	<img src="images/item2.jpg" class="img-fluid" alt="...">
+			        <small>Levie</small>
+			        <h6 class="service_header">Short Pant</h6>
+			        <p>Ks 40,000</p>
+				 </div>
+				 <div class="col my-2">
+				  	<img src="images/item2.jpg" class="img-fluid" alt="...">
+			        <small>Levie</small>
+			        <h6 class="service_header">Short Pant</h6>
+			        <p>Ks 40,000</p>
+				 </div>
+				 <div class="col my-2">
+				  	<img src="images/item2.jpg" class="img-fluid" alt="...">
+			        <small>Levie</small>
+			        <h6 class="service_header">Short Pant</h6>
+			        <p>Ks 40,000</p>
+				 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div style="background-color: #ebebeb;">
+		
+		<div class="container my-5 py-5">
+			<div class="row">
+				<div class="col-12 col-md-3">
+					<p>CLICK & COLLECT LOCATION</p>
+
+					<div class="row">
+						<div class="col-1 col-md-1 pe-md-4">
+							<img src="https://img.icons8.com/windows/32/000000/marker.png"/>							
+						</div>
+						<div class="col-9 col-md-10 ps-md-3">
+							<span>369 Laydaungkan Road,Thingangyun 11071  Yangon Myanmar</span>							
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<p>SIGN UP & SAVE K5,000 FOR FIRST ORDER</p>
+					<div class="input-group mb-3">
+					  <input type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="button-addon2">
+					  <button class="btn btn-danger" type="button" id="button-addon2">Subscribe</button>
+					</div>
+				</div>
+				<div class="col-12 col-md-3">
+					<h6>HELP & FAQs</h6>
+					<p>About ICT.com.mm | Reviews FAQs |Terms | Returns | Privacy Contacting ICT.com.mm</p>
+					<span><img src="https://img.icons8.com/ios/25/000000/phone.png"/> &nbsp;09 798475638 / 39 / 40</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<p class="text-center">Copyright @ 2022 classiccloths.com</p>
+		<center>
+			<img src="images/google_logo.png" class="img-fluid" style="width: 150px;">
+			<img src="images/ios_logo.png" class="img-fluid" style="width: 150px;">
+		</center>
+
+	</div>
+
+
+
+
+
+	
+</body>
+</html>
