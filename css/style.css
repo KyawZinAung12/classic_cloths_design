@@ -8,6 +8,9 @@
 	font-size: 20px;
 	text-decoration: none;
 }
+.logo_name:hover{
+	color: red;
+}
 .sub_name{
 	color: red;
 	font-size: 13px;
@@ -74,7 +77,11 @@
   display: block;
 }
 
-
+.carousel-indicators [data-bs-target]{
+	width: 13px !important;
+	height: 13px !important;
+	border-radius: 50%;
+}
 /*.price_input{
 	width: 100%;
 	display: flex;
