@@ -41,6 +41,9 @@
 .service_header{
 	font-weight: bold;
 }
+.service_text{
+	font-weight: lighter;
+}
 
 .divided{
 	width: 130px;
