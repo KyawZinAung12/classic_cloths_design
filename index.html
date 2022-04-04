@@ -20,6 +20,30 @@
 				console.log(element);
 			  	element.classList.remove("show");
 			});
+			$('.nav_link_sub').hover(function(event) {
+				var element = document.getElementById("SubDIV");
+				console.log(element);
+			  	element.classList.remove("show");
+			});
+			$('.mens_sub').show();
+			$('.ladies_sub').hide();
+			$('.kids_sub').hide();
+			$('.ladie_sub').hover(function(event) {
+				$('.ladies_sub').show();
+				$('.mens_sub').hide();
+				$('.kids_sub').hide();
+			});
+			$('.kid_sub').hover(function(event) {
+				$('.kids_sub').show();
+				$('.mens_sub').hide();
+				$('.ladies_sub').hide();
+			});
+			$('.men_sub').hover(function(event) {
+				$('.mens_sub').show();
+				$('.ladies_sub').hide();
+				$('.kids_sub').hide();
+			});
+
 		});
 	</script>
 </head>
@@ -85,8 +109,8 @@
 	            Products
 	          </a>
 	          <ul class="dropdown-menu show" aria-labelledby="navbarDropdownMenuLink" id="myDIV">
-	            <li><span class="dropdown-item">Men <span class="ps-5">&raquo;</span></span>
-	            <ul class="dropdown-menu dropdown-submenu">
+	            <li><span class="dropdown-item men_sub">Men <span class="float-end mens_sub">&raquo;</span></span>
+	            <ul class="dropdown-menu dropdown-submenu show" id="SubDIV">
 			        <li>
 			            <a class="dropdown-item" href="shop.html">T-Shirts</a>
 			        </li>
@@ -132,7 +156,7 @@
 			    </ul>
 			    </li>
 	            <li>
-					<span class="dropdown-item">Ladie's <span class="ps-5">&raquo;</span></span>
+					<span class="dropdown-item nav_link_sub ladie_sub">Ladie's <span class="float-end ladies_sub">&raquo;</span></span>
 					<ul class="dropdown-menu dropdown-submenu">
 						<li>
 							<a class="dropdown-item" href="#">T-Shirts</a>
@@ -170,7 +194,7 @@
 					</ul>
 				</li>
 	            <li>
-					<span class="dropdown-item" href="#">Kid's <span class="ps-5">&raquo;</span></span>
+					<span class="dropdown-item nav_link_sub kid_sub" href="#">Kid's <span class="float-end kids_sub">&raquo;</span></span>
 					<ul class="dropdown-menu dropdown-submenu">
 						<li>
 							<a class="dropdown-item" href="#">T-Shirts</a>
@@ -372,7 +396,9 @@
 							<img src="https://img.icons8.com/windows/32/000000/marker.png"/>							
 						</div>
 						<div class="col-9 col-md-10 ps-md-3">
-							<small class="service_text">369 Laydaungkan Road,Thingangyun 11071  Yangon Myanmar</small>							
+							<small class="service_text">
+								Shwe Moe Kaung Condo, Room No. (GR-6), Corner Of Aung Zaya & Moe kaung Road, Kyauk Kone, Yankin Township, Yangon, Myanmar.
+							</small>							
 						</div>
 					</div>
 				</div>
@@ -385,8 +411,9 @@
 				</div>
 				<div class="col-12 col-md-3 my-2">
 					<p>HELP & FAQs</p>
-					<small class="service_text">About ICT.com.mm | Reviews FAQs |Terms | Returns | Privacy Contacting ICT.com.mm</small>
-					<p class="service_text"><img src="https://img.icons8.com/ios/25/000000/phone.png"/> &nbsp;09 798475638 / 39 / 40</p>
+					<small class="service_text">
+						All are world Branded clothes exported from the garments factory. Wholesale, retail and cheap prices.</small>
+					<p class="service_text"><img src="https://img.icons8.com/ios/25/000000/phone.png"/> &nbsp;09 45725 8400 / 01 / 02</p>
 				</div>
 			</div>
 		</div>
