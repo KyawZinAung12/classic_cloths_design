@@ -2,15 +2,16 @@
 <html>
 <head>
 	<title>Classic Cloths</title>
-	<link rel="icon" href="images/logo.jpg">
+	<link rel="icon" href="images/logo.png">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -57,7 +58,7 @@
 					}else {
 						priceInput[0].value=minVal;
 						priceInput[1].value=maxVal;
-
+						
 						progress.style.left=(minVal/rangeInput[0].max)*100 +"%";
 						progress.style.right=100-(maxVal/rangeInput[1].max)*100 +"%";
 					}
@@ -66,20 +67,25 @@
 
 				})
 			});
+			
 		});
+			
 	</script>
 </head>
 <body>
-	<nav class="ms-md-5 mt-2">
-		<div class="container-fluid">
+	<nav class="nav_background">
+		<div class="container">
 			<div class="row">
 				<div class="col-7 col-md-3">
 					<div class="logo">
-						<a href="index.html" class="logo_name ">Classic Cloths</a>
-						<p class="sub_name"><small> @Classicexportclothes  · Product/service</small></p>
+						<!-- <a href="index.html" class="logo_name ">Classic Cloths</a>
+						<p class="sub_name"><small> @Classicexportclothes  · Product/service</small></p> -->
+						<a href="index.html">
+							<img src="images/logo.jpg" alt="" class="img-fluid logo_img">
+						</a>
 					</div>
 				</div>
-				<div class="col-4 col-md-6 d-none d-md-block">
+				<div class="col-4 col-md-6 my-4 d-none d-md-block">
 					<div class="input-group mt-2">
 					  <input class="form-control border-end-0 border search_input" type="search" placeholder="Search By Title" id="example-search-input">
 					  <span class="input-group-append">
@@ -89,67 +95,115 @@
 					  </span>
 				  </div>
 				</div>
-				<div class="col-5 col-md-3">
-					<img src="https://img.icons8.com/pastel-glyph/25/000000/shopping-trolley--v2.png"/ class="float-end px-1 px-md-3 mt-2">
-					<img src="https://img.icons8.com/pastel-glyph/25/000000/hearts--v1.png"/ class="float-end px-1 px-md-3 mt-2">
-					<img src="https://img.icons8.com/pastel-glyph/25/000000/check-male.png"/ class="float-end px-1 px-md-3 mt-2">
-
+				<div class="col-5 my-4 py-3 col-md-3">
+				  <span class="position-relative border-o float-end mx-1 mx-md-3">
+					  <a href=""><img src="https://img.icons8.com/pastel-glyph/25/000000/shopping-trolley--v2.png"/ class="position-relative"></a>
+					  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill btn-dark">
+						3
+						<span class="visually-hidden">unread messages</span>
+					  </span>
+				  </span>
+				  <span class="position-relative border-o float-end mx-1 mx-md-3">
+					  <a href=""><img src="https://img.icons8.com/pastel-glyph/25/000000/hearts--v1.png"/ class="position-relative"></a>
+					  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill btn-dark">
+						5
+						<span class="visually-hidden">unread messages</span>
+					  </span>
+				  </span>
+				  <span class="position-relative border-o float-end mx-1 mx-md-3">
+					  <a href=""><img src="https://img.icons8.com/pastel-glyph/25/000000/check-male.png"/ class="position-relative"></a>
+				  </span>
+				  
+				  
 				</div>
 			</div>
 	  </div>
   </nav>
-	<nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0">
-	  <div class="container-fluid ms-md-5">
-	    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggler-icon"></span>
-	    </button>
-	    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-	      <ul class="navbar-nav">
-	        
-	        
-	        <li class="nav-item dropdown">
-	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	            Products
-	          </a>
-	          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	            <li><a class="dropdown-item" href="shop.html">T-Shirt</a></li>
-	            <li><a class="dropdown-item" href="#">Jeans</a></li>
-	            <li><a class="dropdown-item" href="#">Shorts</a></li>
-	            <li><a class="dropdown-item" href="#">Shirts</a></li>
-	            <li><a class="dropdown-item" href="#">Hoodies</a></li>
-	          </ul>
-	        </li>
-	        <li class="nav-item dropdown">
-	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	            Brands
-	          </a>
-	          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	            <li><a class="dropdown-item" href="#">Levi’s Denim</a></li>
-	            <li><a class="dropdown-item" href="#"> Abercrombie</a></li>
-	            <li><a class="dropdown-item" href="#">Tommy Hilfiger</a></li>
-	            <li><a class="dropdown-item" href="#"> Bio Wash</a></li>
-	          </ul>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" aria-current="page" href="#">Promotions</a>
-	        </li>
-	      </ul>
-	    </div>
+  <nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0">
+	<div class="container">
+	  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+		  
+		  
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Products
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="myDIV">
+			  <li><a class="dropdown-item" href="shop.html">Ladie's &nbsp;&nbsp;&nbsp;&nbsp;&raquo;</a>
+			  <ul class="dropdown-menu dropdown-submenu">
+				  <li>
+					<a class="dropdown-item" href="#">Levie Short T-Shirt</a>
+				  </li>
+				  <li>
+					<a class="dropdown-item" href="#">Levie Long T-Shirt</a>
+				  </li>
+				  <li>
+					<a class="dropdown-item" href="#">Bio Wash Short T-Shirt</a>
+				  </li>
+				  <li>
+					<a class="dropdown-item" href="#">Bio Wash Long T-Shirt</a>
+				  </li>			          
+			  </ul>
+			  </li>
+			  <li><a class="dropdown-item" href="#">Men</a></li>
+			  <li><a class="dropdown-item" href="#">Kid's</a></li>
+			  <!-- <li><a class="dropdown-item" href="#">Zara </a></li>
+			  <li><a class="dropdown-item" href="#">Vintage Canadian</a></li>
+			  <li><a class="dropdown-item" href="#">Tommy Hilfiger </a></li>
+			  <li><a class="dropdown-item" href="#">CK Boxer</a></li>
+			  <li><a class="dropdown-item" href="#">Lacoste</a></li>
+			  <li><a class="dropdown-item" href="#">Levi's</a></li>
+			  <li><a class="dropdown-item" href="#">Hugo Boss</a></li> -->
+			  <!-- <li><a class="dropdown-item" href="#">Pier One</a></li>
+			  <li><a class="dropdown-item" href="#">M & S </a></li>
+			  <li><a class="dropdown-item" href="#">Guy's Vision </a></li>
+			  <li><a class="dropdown-item" href="#">B=RIA </a></li>
+			  <li><a class="dropdown-item" href="#">George </a></li>
+			  <li><a class="dropdown-item" href="#">Celio </a></li>
+			  <li><a class="dropdown-item" href="#">Fila </a></li>
+			  <li><a class="dropdown-item" href="#">A & R </a></li>
+			  <li><a class="dropdown-item" href="#">Pull & Bear</a></li>
+			  <li><a class="dropdown-item" href="#">Crivit Golf Shefron </a></li>
+			  <li><a class="dropdown-item" href="#">Jordache </a></li> -->
+
+
+			</ul>
+		  </li>
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle nav_link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  Brands
+			</a>
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <li><a class="dropdown-item" href="#">Levi's Denim</a></li>
+			  <li><a class="dropdown-item" href="#"> Abercrombie</a></li>
+			  <li><a class="dropdown-item" href="#">Tommy Hilfiger</a></li>
+			  <li><a class="dropdown-item" href="#"> Bio Wash</a></li>
+			</ul>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link nav_link" aria-current="page" href="#" >Promotions</a>
+		  </li>
+		</ul>
 	  </div>
-	</nav>
+	</div>
+  </nav>
 
 	<div style="background-color: #ebebeb;">
-		<h3 class="text-center py-5">Pants</h3>
+		<h3 class="text-center py-3 py-md-5">Shirts</h3>
 	</div>
 
 	<div class="container my-5">
 		<div class="row">
 			<div class="col-12 col-md-3">
 				<h6>Filter</h6>
-				<h5 class="service_header">Product Types</h5>
+				<h6 class="service_header">Product Types</h6>
 				<hr class="divided">
-				<div class="row">
+				<div class="row font_size_shop">
 					<div class="col-8">
 						<div class="form-check">
 						  <input class="form-check-input" type="checkbox" value="" id="Jean">
@@ -170,9 +224,9 @@
 					</div>
 				</div>
 
-				<h5 class="service_header mt-4">Brands</h5>
+				<h6 class="service_header mt-4">Brands</h6>
 				<hr class="divided_brand">
-				<div class="row">
+				<div class="row font_size_shop">
 					<div class="col-8">
 						<div class="form-check">
 						  <input class="form-check-input" type="checkbox" value="" id="Levie">
@@ -200,7 +254,7 @@
 					</div>
 				</div>
 
-				<h5 class="service_header mt-4">Price(K)</h5>
+				<h6 class="service_header mt-4">Price(K)</h6>
 				<hr class="divided_brand">
 
 				<div class="price_input">
@@ -227,7 +281,22 @@
 			<div class="col-12 col-md-9 mt-3 mt-md-0">
 				<div class="row">
 					<div class="col">
-						<button class="btn btn-sm btn-secondary float-end">Sort By</button>						
+						<!-- Example single danger button -->
+						<div class="btn-group float-end">
+							<button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+							Action
+							</button>
+							<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Relevance</a></li>
+							<li><a class="dropdown-item" href="#">Price: Low to High</a></li>
+							<li><a class="dropdown-item" href="#">Price: High to Low</a></li>
+							<li><a class="dropdown-item" href="#">New to Old</a></li>
+							<li><a class="dropdown-item" href="#">Old to New</a></li>
+							<li><a class="dropdown-item" href="#">Title: A to Z</a></li>
+							<li><a class="dropdown-item" href="#">Title: Z to A</a></li>
+							<li><a class="dropdown-item" href="#">Best Selling</a></li>
+							</ul>
+						</div>				
 					</div>
 					
 				</div>
@@ -288,9 +357,54 @@
 
 
 
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-4 my-2">
+				
+				<div class="row">
+					<div class="col-3">
+						<img src="https://img.icons8.com/material-outlined/60/000000/car--v1.png"/>						
+					</div>
+					<div class="col-9 m-0 p-1">
+						<p class="m-0 p-0 service_header">FREE & SUPER SPEED DELIVERY</p>
+						<small class="service_text">Any order over K300,00 will receive FREE door-to-door delivery within Yangon and any bus terminals in myanmar.</small>	
+					</div>
+				</div>
+
+			</div>
+
+			<div class="col-12 col-md-4 my-2">
+				
+				<div class="row">
+					<div class="col-3">
+						<img src="https://img.icons8.com/external-tanah-basah-detailed-outline-tanah-basah/60/000000/external-keyboard-user-interface-tanah-basah-detailed-outline-tanah-basah.png"/>					
+					</div>
+					<div class="col-9 m-0 p-0">
+						<p class="m-0 p-0 service_header">ACCEPT DIGITIALLY</p>
+						<small class="service_text">Pay securely with MPU,Visa,Master Card & JCB, Wave Pay,KBZ Pay,CB Pay,One Pay & AYA Pay are accepted too.</small>	
+					</div>
+				</div>
+
+			</div>
+			<div class="col-12 col-md-4 my-2">
+				
+				<div class="row">
+					<div class="col-3">
+						<img src="https://img.icons8.com/windows/60/000000/happy--v1.png"/>					
+					</div>
+					<div class="col-9 m-0 p-0">
+						<p class="m-0 p-0 service_header">BRAND NEW & WARRANTY</p>
+						<small class="service_text">Buy with confidence from authorised distributors,3 days return policy & price-matching guarantees.</small>	
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
 	<div style="background-color: #ebebeb;">
 		
-		<div class="container my-5 py-5">
+		<div class="container my-4 py-5">
 			<div class="row">
 				<div class="col-12 col-md-3 my-2">
 					<p>CLICK & COLLECT LOCATION</p>
@@ -305,14 +419,14 @@
 					</div>
 				</div>
 				<div class="col-12 col-md-6 my-2">
-					<p class="pb-0 mb-0">SIGN UP & SAVE K5,000 FOR FIRST ORDER</p>
-					<div class="input-group mb-3">
+					<p>SIGN UP & SAVE K5,000 FOR FIRST ORDER</p>
+					<div class="input-group  py-1">
 					  <input type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="button-addon2">
 					  <button class="btn btn-danger" type="button" id="button-addon2">Subscribe</button>
 					</div>
 				</div>
 				<div class="col-12 col-md-3 my-2">
-					<p class="pb-0 mb-0">HELP & FAQs</p>
+					<p>HELP & FAQs</p>
 					<small class="service_text">About ICT.com.mm | Reviews FAQs |Terms | Returns | Privacy Contacting ICT.com.mm</small>
 					<p class="service_text"><img src="https://img.icons8.com/ios/25/000000/phone.png"/> &nbsp;09 798475638 / 39 / 40</p>
 				</div>
@@ -320,8 +434,9 @@
 		</div>
 	</div>
 
-	<div class="container  my-5">
-		<p class="text-center">Copyright @ 2022 classiccloths.com</p>
+
+	<div class="container my-4">
+		<p class="text-center my-2">Copyright @ 2022 classiccloths.com</p>
 		<center>
 			<img src="images/google_logo.png" class="img-fluid" style="width: 150px;">
 			<img src="images/ios_logo.png" class="img-fluid" style="width: 150px;">

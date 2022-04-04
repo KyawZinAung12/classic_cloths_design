@@ -2,15 +2,17 @@
 <html>
 <head>
 	<title>Classic Cloths</title>
-	<link rel="icon" href="images/logo.jpg">
+	<link rel="icon" href="images/logo.png">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.nav_link').click(function(event) {
@@ -22,16 +24,19 @@
 	</script>
 </head>
 <body>
-	<nav class="ms-md-5 mt-2">
-	  	<div class="container-fluid">
+	<nav class="nav_background">
+	  	<div class="container">
 	  		<div class="row">
 	  			<div class="col-7 col-md-3">
 	  				<div class="logo">
-				  		<a href="index.html" class="logo_name ">Classic Cloths</a>
-				  		<p class="sub_name"><small> @Classicexportclothes  · Product/service</small></p>
+				  		<!-- <a href="index.html" class="logo_name ">Classic Cloths</a>
+				  		<p class="sub_name"><small> @Classicexportclothes  · Product/service</small></p> -->
+						  <a href="index.html">
+							  <img src="images/logo.jpg" alt="" class="img-fluid logo_img">
+						  </a>
 				  	</div>
 	  			</div>
-	  			<div class="col-4 col-md-6 d-none d-md-block">
+	  			<div class="col-4 col-md-6 my-4 d-none d-md-block">
 	  				<div class="input-group mt-2">
 		                <input class="form-control border-end-0 border search_input" type="search" placeholder="Search By Title" id="example-search-input">
 		                <span class="input-group-append">
@@ -41,16 +46,32 @@
 		                </span>
 		            </div>
 	  			</div>
-	  			<div class="col-5 col-md-3">
-					<img src="https://img.icons8.com/pastel-glyph/25/000000/shopping-trolley--v2.png"/ class="float-end px-1 px-md-3 mt-2">
-					<img src="https://img.icons8.com/pastel-glyph/25/000000/hearts--v1.png"/ class="float-end px-1 px-md-3 mt-2">
-					<img src="https://img.icons8.com/pastel-glyph/25/000000/check-male.png"/ class="float-end px-1 px-md-3 mt-2">
+	  			<div class="col-5 my-4 py-3 col-md-3">
+					<span class="position-relative border-o float-end mx-1 mx-md-3">
+						<a href=""><img src="https://img.icons8.com/pastel-glyph/25/000000/shopping-trolley--v2.png"/ class="position-relative"></a>
+						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill btn-dark">
+						  3
+						  <span class="visually-hidden">unread messages</span>
+						</span>
+					</span>
+					<span class="position-relative border-o float-end mx-1 mx-md-3">
+						<a href=""><img src="https://img.icons8.com/pastel-glyph/25/000000/hearts--v1.png"/ class="position-relative"></a>
+						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill btn-dark">
+						  5
+						  <span class="visually-hidden">unread messages</span>
+						</span>
+					</span>
+					<span class="position-relative border-o float-end mx-1 mx-md-3">
+						<a href=""><img src="https://img.icons8.com/pastel-glyph/25/000000/check-male.png"/ class="position-relative"></a>
+					</span>
+					
+					
 	  			</div>
 	  		</div>
 		</div>
 	</nav>
 	<nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0">
-	  <div class="container-fluid ms-md-5">
+	  <div class="container">
 	    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
@@ -197,7 +218,7 @@
 		    </div>
 		  </div>
 		</div>
-		<center><a href="" class="more_items my-4">more items ...</a></center>
+		<center><a href="" class="more_items my-1">more items ...</a></center>
 
 	</div>
 
@@ -248,7 +269,7 @@
 
 	<div style="background-color: #ebebeb;">
 		
-		<div class="container my-5 py-5">
+		<div class="container my-4 py-5">
 			<div class="row">
 				<div class="col-12 col-md-3 my-2">
 					<p>CLICK & COLLECT LOCATION</p>
@@ -263,14 +284,14 @@
 					</div>
 				</div>
 				<div class="col-12 col-md-6 my-2">
-					<p class="pb-0 mb-0">SIGN UP & SAVE K5,000 FOR FIRST ORDER</p>
-					<div class="input-group mb-3">
+					<p>SIGN UP & SAVE K5,000 FOR FIRST ORDER</p>
+					<div class="input-group py-1">
 					  <input type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="button-addon2">
 					  <button class="btn btn-danger" type="button" id="button-addon2">Subscribe</button>
 					</div>
 				</div>
 				<div class="col-12 col-md-3 my-2">
-					<p class="pb-0 mb-0">HELP & FAQs</p>
+					<p>HELP & FAQs</p>
 					<small class="service_text">About ICT.com.mm | Reviews FAQs |Terms | Returns | Privacy Contacting ICT.com.mm</small>
 					<p class="service_text"><img src="https://img.icons8.com/ios/25/000000/phone.png"/> &nbsp;09 798475638 / 39 / 40</p>
 				</div>
@@ -279,8 +300,8 @@
 	</div>
 
 
-	<div class="container my-5">
-		<p class="text-center">Copyright @ 2022 classiccloths.com</p>
+	<div class="container my-4">
+		<p class="text-center my-2">Copyright @ 2022 classiccloths.com</p>
 		<center>
 			<img src="images/google_logo.png" class="img-fluid" style="width: 150px;">
 			<img src="images/ios_logo.png" class="img-fluid" style="width: 150px;">

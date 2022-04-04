@@ -3,17 +3,13 @@
 	font-family: 'Poppins', sans-serif;
 	font-weight: bold;
 }
-.logo_name{
-	color: red;
-	font-size: 20px;
-	text-decoration: none;
+
+.nav_background{
+	background-color: #c9c9c9;
 }
-.logo_name:hover{
-	color: red;
-}
-.sub_name{
-	color: red;
-	font-size: 13px;
+.logo_img{
+	width: 250px;
+	height: 100px !important;
 }
 .logo{
 	display: inline-block;
@@ -27,7 +23,9 @@
 .nav-link{
 	color: white !important;
 }
-
+.nav_icon{
+	margin: 12px 0px;
+}
 .feature{
 	border-left: 4px solid red;
 	font-weight: bold;
@@ -46,12 +44,12 @@
 }
 
 .divided{
-	width: 130px;
+	width: 110px;
 	margin-top: 0px;
 	border: 1px solid black;
 }
 .divided_brand{
-	width: 80px;
+	width: 50px;
 	margin-top: 0px;
 	border: 1px solid black;
 }
@@ -125,7 +123,9 @@
 	padding: 20px;
 	text-align: center;
   }
-
+.font_size_shop{
+	font-size: 14px;
+}
 /*.price_input{
 	width: 100%;
 	display: flex;
