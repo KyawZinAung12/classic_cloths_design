@@ -1,7 +1,7 @@
 
 *{
 	font-family: 'Poppins', sans-serif;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 .nav_background{
@@ -191,6 +191,21 @@ input[type="range"]::-moz-slider-thumb{
 }
 .promotion_price{
 	font-size: 12px;
+}
+
+.shop_link{
+	text-decoration: none;
+	color: black;
+}
+.shop_link:hover{
+	color: black;
+}
+.shop_name:hover{
+	color: black;
+}
+
+.cart_phone_size{
+	font-size: 13px;
 }
 
 
