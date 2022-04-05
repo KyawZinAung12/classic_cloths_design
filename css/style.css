@@ -183,6 +183,15 @@ input[type="range"]::-moz-slider-thumb{
 
 
 }
+.shop_search:focus{
+	border-top: none !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: none !important;
+}
+.promotion_price{
+	font-size: 12px;
+}
 
 
 
