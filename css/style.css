@@ -26,6 +26,11 @@
 .nav_icon{
 	margin: 12px 0px;
 }
+.navbar{
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	font-size: 14px;
+}
 .feature{
 	border-left: 4px solid red;
 	font-weight: bold;
