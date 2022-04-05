@@ -9,9 +9,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="fontawesome/js/all.min.js"></script>
+	<style>
 
+	</style>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -42,6 +46,21 @@
 				$('.mens_sub').show();
 				$('.ladies_sub').hide();
 				$('.kids_sub').hide();
+			});
+
+
+			// password eye
+			$('#show_hide_password span a img').attr( 'src','images/closed-eye.png' );
+			$("#show_hide_password a").on('click', function(event) {
+				event.preventDefault();
+
+				if($('#show_hide_password input').attr("type") == "text"){
+					$('#show_hide_password input').attr('type', 'password');
+					$('#show_hide_password span a img').attr( 'src','images/closed-eye.png' );
+				}else if($('#show_hide_password input').attr("type") == "password"){
+					$('#show_hide_password input').attr('type', 'text');
+					$('#show_hide_password span a img').attr('src','images/eye.png');
+				}
 			});
 
 		});
@@ -86,7 +105,7 @@
 						</span>
 					</span>
 					<span class="position-relative border-o float-end mx-1 mx-md-3">
-						<a href=""><img src="https://img.icons8.com/pastel-glyph/25/000000/check-male.png"/ class="position-relative"></a>
+						<a href="login.html"><img src="https://img.icons8.com/pastel-glyph/25/000000/check-male.png"/ class="position-relative"></a>
 					</span>
 					
 					
@@ -94,7 +113,7 @@
 	  		</div>
 		</div>
 	</nav>
-	<nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0">
+	<nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header">
 	  <div class="container">
 	    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -260,10 +279,73 @@
 	    </div>
 	  </div>
 	</nav>
+	<div style="background-color: #ebebeb;">
+		<h3 class="text-center py-3 py-md-5">Your Login</h3>
+	</div>
 
-    <div class="container">
-        <h1>This is login</h1>
+    <div class="container my-md-5">
+		<!-- <h4>Get Started</h4> -->
+		<div class="row">
+			<div class="col-12 col-sm-6 d-none d-sm-block">
+				<img src="images/login1.png" alt="" class="img-fluid">
+			</div>
+			<div class="col-12 col-sm-5 mt-5">
+				<h5>Get Started</h5>
+				<hr style="width: 120px;">
+				<div class="mb-3 mt-0 mt-md-4">
+					<label for="email" class="form-label">Email</label>
+					<input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+				</div>
+
+				
+				<div class="form-group">
+					<label>Password</label>
+					<div class="input-group mb-3" id="show_hide_password">
+						<input type="password" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						<span class="input-group-text" id="basic-addon2"><a href=""><img src="" alt="" > </a></span>
+					
+					</div>
+				</div>
+				<div class="mb-3">
+					<button class="btn btn-danger btn-sm float-end my-3">Login</button>
+				</div>
+
+			</div>
+
+		</div>
     </div>
+
+	<div style="background-color: #ebebeb;">
+		
+		<div class="container my-4 py-5">
+			<div class="row">
+				<div class="col-12 col-md-3 my-2">
+					<p class="service_header">CLICK & COLLECT LOCATION</p>
+
+					<div class="row">
+						<div class="col-1 col-md-1 pe-md-4">
+							<img src="https://img.icons8.com/windows/32/000000/marker.png"/>							
+						</div>
+						<div class="col-9 col-md-10 ps-md-3">
+							<small class="service_text">369 Laydaungkan Road,Thingangyun 11071  Yangon Myanmar</small>							
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 my-2">
+					<p class="service_header">SIGN UP & SAVE K5,000 FOR FIRST ORDER</p>
+					<div class="input-group  py-1">
+					  <input type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="button-addon2">
+					  <button class="btn btn-danger" type="button" id="button-addon2">Subscribe</button>
+					</div>
+				</div>
+				<div class="col-12 col-md-3 my-2">
+					<p class="service_header">HELP & FAQs</p>
+					<small class="service_text">About ICT.com.mm | Reviews FAQs |Terms | Returns | Privacy Contacting ICT.com.mm</small>
+					<p class="service_text"><img src="https://img.icons8.com/ios/25/000000/phone.png"/> &nbsp;09 798475638 / 39 / 40</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 	<div class="container my-4">
