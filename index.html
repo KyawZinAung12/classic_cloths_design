@@ -25,7 +25,7 @@
 				console.log(element);
 			  	element.classList.remove("show");
 			});
-			$('.mens_sub').show();
+			$('.mens_sub').hide();
 			$('.ladies_sub').hide();
 			$('.kids_sub').hide();
 			$('.ladie_sub').hover(function(event) {
@@ -43,6 +43,16 @@
 				$('.ladies_sub').hide();
 				$('.kids_sub').hide();
 			});
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById("navbar").style.top = "0";
+			} else {
+				document.getElementById("navbar").style.top = "-90px";
+			}
+			prevScrollpos = currentScrollPos;
+			}
 
 		});
 	</script>
@@ -94,7 +104,7 @@
 	  		</div>
 		</div>
 	</nav>
-	<nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header">
+	<nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header sticky-top" id="navbar">
 	  <div class="container">
 	    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,9 +118,9 @@
 	          <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
 	            Products
 	          </a>
-	          <ul class="dropdown-menu show" aria-labelledby="navbarDropdownMenuLink" id="myDIV">
+	          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="myDIV">
 	            <li><span class="dropdown-item men_sub">Men <span class="float-end mens_sub">&raquo;</span></span>
-	            <ul class="dropdown-menu dropdown-submenu show" id="SubDIV">
+	            <ul class="dropdown-menu dropdown-submenu " id="SubDIV">
 			        <li>
 			            <a class="dropdown-item" href="shop.html">T-Shirts</a>
 			        </li>
@@ -235,23 +245,8 @@
 
 	          </ul>
 	        </li>
-	        <li class="nav-item dropdown">
-	          <a class="nav-link dropdown-toggle nav_link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-	            Brands
-	          </a>
-	          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	            <li><a class="dropdown-item" href="#">U.S. Polo </a></li>
-	            <li><a class="dropdown-item" href="#">Sfera Polo</a></li>
-	            <li><a class="dropdown-item" href="#">Pants</a></li>
-	            <li><a class="dropdown-item" href="#"> Fox & Bunny </a></li>
-	            <li><a class="dropdown-item" href="#"> Jack & Jones </a></li>
-	            <li><a class="dropdown-item" href="#"> Tommy Hilfiger </a></li>
-	            <li><a class="dropdown-item" href="#"> Levi's </a></li>
-	            <li><a class="dropdown-item" href="#"> DOPO DOPO</a></li>
-
-
-
-	          </ul>
+	        <li class="nav-item">
+	          <a class="nav-link nav_link" aria-current="page" href="brand.html"> Brands</a>	          
 	        </li>
 	        <li class="nav-item">
 	          <a class="nav-link nav_link" aria-current="page" href="promotion.html" >Promotions</a>
@@ -280,24 +275,15 @@
 	  </div>
 	</div>
 
-	<div class="container my-2 my-md-5">
-		<div class="row">
-			<div class=" col-12  col-md-6 my-2">
-				<a href=""><img src="images/promotion/2.jpg" class="img-fluid"></a>
-			</div>
-			<div class=" col-12  col-md-6 my-2">
-				<a href=""><img src="images/promotion/1.jpg"  class="img-fluid"></a>
-			</div>
-		</div>
-	</div>
+	
 
 	<div class="container my-5">
 		<h4 class="feature ps-3">Hot Items</h4>
 
-		<div class="row row-cols-1 row-cols-sm-2  row-cols-md-6 my-3">
+		<div class="row row-cols-1 row-cols-sm-2  row-cols-md-5 row-cols-lg-6 my-3">
 		  <div class="col mb-2">
 		    <div class="card h-100">
-		      <a href=""><img src="images/feature/7.jpg" class="card-img-top image" alt="..."></a>		     
+		      <a href="shop.html"><img src="images/feature/7.jpg" class="card-img-top image" alt="..."></a>		     
 			  <a href=""><div class="overlay d-none d-md-block">Ladies Polo ...</div></a>
 			  <a href=""><div class="d-block d-md-none overlay_second">Ladies Polo ...</div></a>
 		    </div>
@@ -335,11 +321,77 @@
 		    </div>
 		  </div>
 		</div>
-		<center><a href="" class="more_items my-1">more items ...</a></center>
+		<center><a href="shop.html" class="more_items my-1">more items ...</a></center>
 
 	</div>
 
-	<div class="container">
+	<div class="container my-5">
+		<h4 class="text-center">New Arrival Items</h4>
+		<hr class="divided_arrival">
+
+		<div class="row row-cols-1 row-cols-sm-2  row-cols-md-4 row-cols-lg-5 my-3">
+		<div class="col mb-2">
+			<div class="card h-100">
+				<a href="shop.html"><img src="images/feature/3.jpg" class="card-img-top image" alt="...">
+				<div class="overlay d-none d-md-block">Tommy Hilfiger</div></a>
+				<small class="ms-2 my-3">Tommy Hilfiger Men's Long Sleeve Shirt</small>
+				
+			</div>
+			</div>
+		  <div class="col mb-2">
+		    <div class="card h-100">
+		      <a href=""><img src="images/feature/7.jpg" class="card-img-top image" alt="..."></a>		     
+			  <a href=""><div class="overlay d-none d-md-block">Levie</div></a>
+			  <small class="ms-2 my-3">Levie's Polo Couple T-Shirt</small>
+
+		    </div>
+		  </div>
+		  <div class="col mb-2">
+		    <div class="card h-100">
+				<a href=""><img src="images/feature/2.jpg" class="card-img-top image" alt="..."></a>
+				<a href=""><div class="overlay d-none d-md-block">Puma</div></a>
+				<small class="ms-2 my-3">Puma T-Shirt 2121</small>				
+		    </div>
+		  </div>
+		  <div class="col mb-2">
+		    <div class="card h-100">
+				<a href="">
+					<img src="images/feature/3.jpg" class="card-img-top image" alt="...">
+					<div class="overlay d-none d-md-block">Tommy Hilfiger</div>
+				</a>
+			  <small class="ms-2 my-3">Tommy Hilfiger Men's Long Sleeve Shirt</small>
+		     
+		    </div>
+		  </div>
+		  <div class="col mb-2">
+		    <div class="card h-100">
+				<a href="">
+					<img src="images/feature/5.jpg" class="card-img-top" alt="...">
+					<div class="overlay d-none d-md-block">Puma</div>
+				</a>
+			  <small class="ms-2 my-3">Puma Short Sleeve Shirt</small>
+		      
+		    </div>
+		  </div>
+		</div>
+		<center><a href="shop.html" class="more_items my-1">more items ...</a></center>
+
+	</div>
+
+	<div style="background-color: #ebebeb;" class="py-2 my-5">
+		<div class="container my-2 my-md-5">
+			<div class="row">
+				<div class=" col-12  col-md-6 my-2">
+					<a href=""><img src="images/promotion/2.jpg" class="img-fluid"></a>
+				</div>
+				<div class=" col-12  col-md-6 my-2">
+					<a href=""><img src="images/promotion/1.jpg"  class="img-fluid"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container my-5">
 		<div class="row">
 			<div class="col-12 col-md-4 my-2">
 				

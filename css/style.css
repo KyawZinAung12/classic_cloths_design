@@ -31,8 +31,14 @@
 	padding-bottom: 0px !important; */
 	font-size: 14px;
 }
+.divided_arrival{
+	max-width: 100px;
+	border: 1px solid red;
+	opacity: 1;
+	margin: auto;
+}
 .feature{
-	border-left: 4px solid red;
+	border-left: 4px solid #f00;
 	font-weight: bold;
 }
 

@@ -72,7 +72,7 @@
 			// 	console.log(element);
 			//   	element.classList.remove("show");
 			// });
-			$('.mens_sub').show();
+			$('.mens_sub').hide();
 			$('.ladies_sub').hide();
 			$('.kids_sub').hide();
 			$('.ladie_sub').hover(function(event) {
@@ -142,7 +142,7 @@
 			</div>
 	  </div>
   </nav>
-  <nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header">
+  <nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header sticky-top">
 	<div class="container">
 	  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,7 +158,7 @@
 			</a>
 			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="myDIV">
 			  <li><span class="dropdown-item men_sub">Men <span class="float-end mens_sub">&raquo;</span></span>
-			  <ul class="dropdown-menu dropdown-submenu" id="SubDIV">
+			  <ul class="dropdown-menu dropdown-submenu " id="SubDIV">
 				  <li>
 					  <a class="dropdown-item" href="shop.html">T-Shirts</a>
 				  </li>
@@ -283,23 +283,8 @@
 
 			</ul>
 		  </li>
-		  <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle nav_link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-			  Brands
-			</a>
-			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			  <li><a class="dropdown-item" href="#">U.S. Polo </a></li>
-			  <li><a class="dropdown-item" href="#">Sfera Polo</a></li>
-			  <li><a class="dropdown-item" href="#">Pants</a></li>
-			  <li><a class="dropdown-item" href="#"> Fox & Bunny </a></li>
-			  <li><a class="dropdown-item" href="#"> Jack & Jones </a></li>
-			  <li><a class="dropdown-item" href="#"> Tommy Hilfiger </a></li>
-			  <li><a class="dropdown-item" href="#"> Levi's </a></li>
-			  <li><a class="dropdown-item" href="#"> DOPO DOPO</a></li>
-
-
-
-			</ul>
+		  <li class="nav-item">
+			<a class="nav-link nav_link" aria-current="page" href="brand.html"> Brands</a>	          
 		  </li>
 		  <li class="nav-item">
 			<a class="nav-link nav_link" aria-current="page" href="promotion.html" >Promotions</a>
@@ -373,15 +358,15 @@
 				<h6 class="service_header mt-4">Price(K)</h6>
 				<hr class="divided_brand">
 
-				<div class="price_input">
+				<div class="price_input w-75">
 					<div class="field d-inline">
-						<input type="number" class="input_min" value="0"  style="width: 35%">
+						<input type="number" class="input_min" value="0"  style="width: 40%">
 					</div>
-					<div class="separator d-inline mx-3">
+					<div class="separator d-inline mx-1">
 						-
 					</div>
 					<div class="field d-inline">
-						<input type="number" class="input_max" value="100000" style="width: 35%">
+						<input type="number" class="input_max" value="100000" style="width: 40%">
 					</div>
 					<div class="slider mt-3">
 						<div class="progress">							
