@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classic Cloths</title>
+	<link rel="icon" href="images/logo.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="fontawesome/js/all.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.nav_link').click(function(event) {
+				var element = document.getElementById("myDIV");
+				console.log(element);
+			  	element.classList.remove("show");
+			});
+			$('.nav_link_sub').hover(function(event) {
+				var element = document.getElementById("SubDIV");
+				console.log(element);
+			  	element.classList.remove("show");
+			});
+			$('.mens_sub').hide();
+			$('.ladies_sub').hide();
+			$('.kids_sub').hide();
+			$('.ladie_sub').hover(function(event) {
+				$('.ladies_sub').show();
+				$('.mens_sub').hide();
+				$('.kids_sub').hide();
+			});
+			$('.kid_sub').hover(function(event) {
+				$('.kids_sub').show();
+				$('.mens_sub').hide();
+				$('.ladies_sub').hide();
+			});
+			$('.men_sub').hover(function(event) {
+				$('.mens_sub').show();
+				$('.ladies_sub').hide();
+				$('.kids_sub').hide();
+			});
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById("navbar").style.top = "0";
+			} else {
+				document.getElementById("navbar").style.top = "-90px";
+			}
+			prevScrollpos = currentScrollPos;
+			}
+
+
+            // profile edit
+            $('#update_profile').hide();
+            $('.fa-user-pen').click(function(event) {
+                $('#update_profile').show();
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav class="nav_background">
+	  	<div class="container">
+	  		<div class="row">
+	  			<div class="col-7 col-md-3">
+	  				<div class="logo">
+				  		<!-- <a href="index.html" class="logo_name ">Classic Cloths</a>
+				  		<p class="sub_name"><small> @Classicexportclothes  · Product/service</small></p> -->
+						  <a href="index.html">
+							  <img src="images/logo.jpg" alt="" class="img-fluid logo_img">
+						  </a>
+				  	</div>
+	  			</div>
+	  			<div class="col-4 col-md-6 my-4 d-none d-md-block">
+	  				<div class="input-group mt-2">
+		                <input class="form-control border-end-0 border search_input" type="search" placeholder="Search By Title" id="example-search-input">
+		                <span class="input-group-append">
+		                    <button class="btn bg-white search_input  border border-start-0  ms-n5" type="button">
+		                        <img src="https://img.icons8.com/windows/20/000000/search--v1.png"/>
+		                    </button>
+		                </span>
+		            </div>
+	  			</div>
+	  			<div class="col-5 my-4 py-3 col-md-3">
+					<span class="position-relative border-o float-end mx-1 mx-md-3">
+						<a href="cart.html"><img src="https://img.icons8.com/pastel-glyph/25/000000/shopping-trolley--v2.png"/ class="position-relative"></a>
+						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill btn-dark">
+						  3
+						  <span class="visually-hidden">unread messages</span>
+						</span>
+					</span>
+					<span class="position-relative border-o float-end mx-1 mx-md-3">
+						<a href=""><img src="https://img.icons8.com/pastel-glyph/25/000000/hearts--v1.png"/ class="position-relative"></a>
+						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill btn-dark">
+						  5
+						  <span class="visually-hidden">unread messages</span>
+						</span>
+					</span>
+					<span class="position-relative border-o float-end mx-1 mx-md-3">
+						<a href="login.html"><img src="https://img.icons8.com/pastel-glyph/25/000000/check-male.png"/ class="position-relative"></a>
+					</span>
+					
+					
+	  			</div>
+	  		</div>
+		</div>
+	</nav>
+	<nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header sticky-top py-0" id="navbar">
+	  <div class="container">
+	    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	      <ul class="navbar-nav">
+	        
+	        
+	        <li class="nav-item dropdown py-2">
+	          <a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Products
+	          </a>
+	          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="myDIV">
+	            <li><span class="dropdown-item men_sub">Men <span class="float-end mens_sub">&raquo;</span></span>
+	            <ul class="dropdown-menu dropdown-submenu " id="SubDIV">
+			        <li>
+			            <a class="dropdown-item" href="shop.html">T-Shirts</a>
+			        </li>
+			        <li>
+			         	<a class="dropdown-item" href="#">Shirts</a>
+			        </li>
+			        <li>
+			        	<a class="dropdown-item" href="#">Jean T-Shirts</a>
+			        </li>
+			        <li>
+			         	<a class="dropdown-item" href="#">Long Pants</a>
+			        </li>	
+					<li>
+						<a class="dropdown-item" href="#">Half Pants</a>
+					</li>			          
+					<li>
+						<a class="dropdown-item" href="#">Short Pants</a>
+					</li>	
+					<li>
+						<a class="dropdown-item" href="#">Formal Pants</a>
+					</li>	
+					<li>
+						<a class="dropdown-item" href="#">Jogger Pants</a>
+					</li>	
+					<li>
+						<a class="dropdown-item" href="#">Twill Pants</a>
+					</li>	
+					<li>
+						<a class="dropdown-item" href="#">Flannel Shirts</a>
+					</li>	
+					<li>
+						<a class="dropdown-item" href="#">Jackets</a>
+					</li>	
+					<li>
+						<a class="dropdown-item" href="#">Sweaters</a>
+					</li>
+					<li>
+						<a class="dropdown-item" href="#">Hoodies</a>
+					</li>	
+					<li>
+						<a class="dropdown-item" href="#">Boxers</a>
+					</li>
+			    </ul>
+			    </li>
+	            <li>
+					<span class="dropdown-item nav_link_sub ladie_sub">Ladie's <span class="float-end ladies_sub">&raquo;</span></span>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="#">T-Shirts</a>
+						</li>
+						<li>
+							 <a class="dropdown-item" href="#">Shirts</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">Jean T-Shirts</a>
+						</li>
+						<li>
+							 <a class="dropdown-item" href="#">Long Coats</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Skirt</a>
+						</li>			          
+						<li>
+							<a class="dropdown-item" href="#">Crop Top</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Long Pants</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Half Pants</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Short Pants</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Jean Pants</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Underware</a>
+						</li>
+					</ul>
+				</li>
+	            <li>
+					<span class="dropdown-item nav_link_sub kid_sub" href="#">Kid's <span class="float-end kids_sub">&raquo;</span></span>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="#">T-Shirts</a>
+						</li>
+						<li>
+							 <a class="dropdown-item" href="#">Shirts</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">Gavan</a>
+						</li>
+						<li>
+							 <a class="dropdown-item" href="#">Girl Frock</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Girl Frog</a>
+						</li>			          
+						<li>
+							<a class="dropdown-item" href="#">Girl Stocking</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Long Pants</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Half Pants</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Short Pants</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Hoodies</a>
+						</li>	
+						<li>
+							<a class="dropdown-item" href="#">Crop Top</a>
+						</li>
+					</ul>
+				</li>
+
+
+	          </ul>
+	        </li>
+	        <li class="nav-item py-2">
+	          <a class="nav-link nav_link" aria-current="page" href="brand.html"> Brands</a>	          
+	        </li>
+	        <li class="nav-item py-2">
+	          <a class="nav-link nav_link" aria-current="page" href="promotion.html" >Promotions</a>
+	        </li>
+			<li class="nav-item py-2">
+				<a class="nav-link nav_link" aria-current="page" href="activity.html" >Activity</a>
+			  </li>
+			<li class="nav-item py-2">
+				<a class="nav-link nav_link" aria-current="page" href="about.html" >About</a>
+			</li>
+			
+			<li class="nav-item py-2">
+				<a class="nav-link nav_link" aria-current="page" href="contact.html">Contact</a>
+			</li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+    <div style="background-color: #ebebeb;">
+		<h3 class="text-center py-3 py-md-5">Your Account</h3>
+	</div>
+
+    
+
+    <div class="container my-5">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active text-danger" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Order History</button>
+              <button class="nav-link text-danger" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="container my-3">
+                    
+                    <!-- <div class="row">
+                        <div class="col-2">
+                            <p class="service_header">Order Date</p>
+                        </div>
+                        <div class="col-2">
+                            <p class="service_header">VocherNo</p>
+                        </div>
+                        <div class="col-2">
+                            <p class="service_header">Item Name</p>
+                        </div>
+                        <div class="col-2">
+                            <p class="service_header">Size</p>
+                        </div>
+                        <div class="col-2">
+                            <p class="service_header">Quality</p>
+                        </div>
+                        <div class="col-2">
+                            <p class="service_header">Price</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-2">
+                            <p>2/04/2022</p>
+                        </div>
+                        <div class="col-2">
+                            <p>08934223</p>
+                        </div>
+                        <div class="col-2">
+                            <p>Puma T-Shirt 2021</p>
+                        </div>
+                        <div class="col-2">
+                            <p>M</p>
+                        </div>
+                        <div class="col-2">
+                            <p>3</p>
+                        </div>
+                        <div class="col-2">
+                            <p>150000</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-2">
+                            <p>2/04/2022</p>
+                        </div>
+                        <div class="col-2">
+                            <p>08934223</p>
+                        </div>
+                        <div class="col-2">
+                            <p>Puma T-Shirt 2021</p>
+                        </div>
+                        <div class="col-2">
+                            <p>L</p>
+                        </div>
+                        <div class="col-2">
+                            <p>2</p>
+                        </div>
+                        <div class="col-2">
+                            <p>100000</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-2">
+                            <p>2/04/2022</p>
+                        </div>
+                        <div class="col-2">
+                            <p>08934223</p>
+                        </div>
+                        <div class="col-2">
+                            <p>Levie T-Shirt 2021</p>
+                        </div>
+                        <div class="col-2">
+                            <p>S</p>
+                        </div>
+                        <div class="col-2">
+                            <p>3</p>
+                        </div>
+                        <div class="col-2">
+                            <p>180000</p>
+                        </div>
+                    </div> -->
+
+
+                    <div class="table-responsive">
+                        <table class="table caption-top">
+                            <caption class="service_header my-2">Kyaw Zin Aung's Order Detials</caption>
+                            <thead>
+                              <tr>
+                                <th scope="col" class="py-3">Order Date</th>
+                                <th scope="col" class="py-3">VoucherNo</th>
+                                <th scope="col" class="py-3">Item Name</th>
+                                <th scope="col" class="py-3">Size</th>
+                                <th scope="col" class="py-3">Quality</th>
+                                <th scope="col" class="py-3">Price</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="py-3">12/04/2022</td>
+                                <td class="py-3">93489231</td>
+                                <td class="py-3">Puma T-Shirt 2021</td>
+                                <td class="py-3">M</td>
+                                <td class="py-3">3</td>
+                                <td class="py-3">120000</td>
+                              </tr>
+                              <tr>
+                                <td class="py-3">10/04/2022</td>
+                                <td class="py-3">09084834</td>
+                                <td class="py-3">Puma T-Shirt 2021</td>
+                                <td class="py-3">L</td>
+                                <td class="py-3">2</td>
+                                <td class="py-3">80000</td>
+                              </tr>
+                              <tr>
+                                <td class="py-3">10/04/2022</td>
+                                <td class="py-3">09084834</td>
+                                <td class="py-3">Levie T-Shirt 2021</td>
+                                <td class="py-3">S</td>
+                                <td class="py-3">3</td>
+                                <td class="py-3">150000</td>
+                              </tr>
+                              <tr>
+                                <td class="py-3">8/04/2022</td>
+                                <td class="py-3">73947522</td>
+                                <td class="py-3">Puma T-Shirt 2021</td>
+                                <td class="py-3">M</td>
+                                <td class="py-3">3</td>
+                                <td class="py-3">120000</td>
+                              </tr>
+                              <tr>
+                                <td class="py-3">2/04/2022</td>
+                                <td class="py-3">83949284</td>
+                                <td class="py-3">Puma T-Shirt 2021</td>
+                                <td class="py-3">L</td>
+                                <td class="py-3">2</td>
+                                <td class="py-3">80000</td>
+                              </tr>
+                              <tr>
+                                <td class="py-3">2/04/2022</td>
+                                <td class="py-3">83949284</td>
+                                <td class="py-3">Levie T-Shirt 2021</td>
+                                <td class="py-3">S</td>
+                                <td class="py-3">3</td>
+                                <td class="py-3">150000</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="container my-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="service_header">Name</p>
+                        </div>
+                        <div class="col-6">
+                            <p>Kyaw Zin Aung <i class="fa-solid fa-user-pen" style="cursor: pointer;"></i></p>
+                        </div>
+                        <hr>
+                        <div class="col-6">
+                            <p class="service_header">Email</p>
+                        </div>
+                        <div class="col-6">
+                            <p>ukza11977296@gmail.com</p>
+                        </div>
+                        <hr>
+                        <div class="col-6">
+                            <p class="service_header">Phone</p>
+                        </div>
+                        <div class="col-6">
+                            <p>09968962449</p>
+                        </div>
+                        <hr>
+                        <div class="col-6">
+                            <p class="service_header">Date Of Birth</p>
+                        </div>
+                        <div class="col-6">
+                            <p>7/02/1996</p>
+                        </div>
+                        <hr>
+                        
+                    </div>
+                </div>
+                
+                <div class="row my-3 pb-5" id="update_profile">	
+                    		
+                    <div class="offset-md-2 col-md-8 border rounded p-5">
+                        <h3 class="text-center">Change Password</h3>
+                        <form action="" method="post">
+                            <div class="form-group my-3">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Please Enter Name!" value="Kyaw Zin Aung">
+                                
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control " id="email" value="ukza11977296@gmail.com">
+                                
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="password">Password</label>
+                                <input id="password" type="password" class="form-control" name="password">
+                               
+                            </div>
+                            <div class="form-group mb-3">
+                                    <label for="password-confirm" >Confirm Password</label>
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" >
+                            </div>
+                            
+                            <input type="submit" name="" value="Update" class="float-right btn btn-primary mt-3">
+                            </form>
+    
+                    </div>
+                    
+                </div>
+            </div>
+          </div>
+    </div>
+
+
+
+
+
+	<div style="background-color: #ebebeb;">
+		
+		<div class="container my-4 py-5">
+			<div class="row">
+				<div class="col-12 col-md-3 my-2">
+					<p class="service_header">CLICK & COLLECT LOCATION</p>
+
+					<div class="row">
+						<div class="col-1 col-md-1 pe-md-4">
+							<img src="https://img.icons8.com/windows/32/000000/marker.png"/>							
+						</div>
+						<div class="col-9 col-md-10 ps-md-3">
+							<small class="service_text">
+								Shwe Moe Kaung Condo, Room No. (GR-6), Corner Of Aung Zaya & Moe kaung Road, Kyauk Kone, Yankin Township, Yangon, Myanmar.
+							</small>							
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 my-2">
+					<p class="service_header">SIGN UP & SAVE K5,000 FOR FIRST ORDER</p>
+					<div class="input-group py-1">
+					  <input type="text" class="form-control"  aria-label="Recipient's username" aria-describedby="button-addon2">
+					  <button class="btn btn-danger" type="button" id="button-addon2">Subscribe</button>
+					</div>
+				</div>
+				<div class="col-12 col-md-3 my-2">
+					<p class="service_header">HELP & FAQs</p>
+					<small class="service_text">
+						All are world Branded clothes exported from the garments factory. Wholesale, retail and cheap prices.</small>
+					<p class="service_text"><img src="https://img.icons8.com/ios/25/000000/phone.png"/> &nbsp;09 45725 8400 / 01 / 02</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container my-4">
+		<p class="text-center my-2">Copyright @ 2022 classiccloths.com</p>
+		<center>
+			<img src="images/google_logo.png" class="img-fluid" style="width: 150px;">
+			<img src="images/ios_logo.png" class="img-fluid" style="width: 150px;">
+		</center>
+
+	</div>
+
+
+
+
+
+	
+</body>
+</html>

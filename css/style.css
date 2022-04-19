@@ -88,7 +88,6 @@
 .dropdown-menu > li:hover > .dropdown-submenu {
   display: block;
 }
-
 .carousel-indicators [data-bs-target]{
 	width: 13px !important;
 	height: 13px !important;
@@ -219,7 +218,29 @@ input[type="range"]::-moz-slider-thumb{
 	font-size: 13px;
 }
 
+/* about */
 
+.about_divided{
+	width: 150px;
+	/* border: 1px solid red; */
+	/* opacity: 1; */
+
+}
+
+/* images hover zoom */
+
+.card_img{
+	position: relative;
+	overflow: hidden;
+}
+.card_img .images{
+	transition: all 1.5s ease;
+}
+.card_img:hover .images{
+	transform: scale(1.5);
+	cursor:move;
+}
+#results { padding:20px; border:1px solid; background:#ccc; }
 
 
 

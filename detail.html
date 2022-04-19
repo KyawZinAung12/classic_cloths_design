@@ -9,8 +9,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="fontawesome/js/all.min.js"></script>
 
 
 	<script type="text/javascript">
@@ -87,7 +89,7 @@
 			</div>
 	  </div>
   </nav>
-  <nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header sticky-top py-0">
 	<div class="container">
 	  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,7 +99,7 @@
 		<ul class="navbar-nav">
 		  
 		  
-		  <li class="nav-item dropdown">
+		  <li class="nav-item dropdown py-2">
 			<a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
 			  Products
 			</a>
@@ -228,17 +230,29 @@
 
 			</ul>
 		  </li>
-		  <li class="nav-item">
+		  <li class="nav-item py-2">
 			<a class="nav-link nav_link" aria-current="page" href="brand.html"> Brands</a>	          
 		  </li>
-		  <li class="nav-item">
+		  <li class="nav-item py-2">
 			<a class="nav-link nav_link" aria-current="page" href="promotion.html" >Promotions</a>
 		  </li>
+		  <li class="nav-item py-2">
+			<a class="nav-link nav_link" aria-current="page" href="activity.html" >Activity</a>
+		  </li>
+		 <li class="nav-item py-2">
+			<a class="nav-link nav_link" aria-current="page" href="about.html" >About</a>
+		 </li>
+		
+		 <li class="nav-item py-2">
+			<a class="nav-link nav_link" aria-current="page" href="contact.html">Contact</a>
+		 </li>
 		</ul>
 	  </div>
 	</div>
   </nav>
-
+	<div style="background-color: #ebebeb;">
+		<h3 class="text-center py-3 py-md-5">Puma</h3>
+	</div>
 	<div class="container my-5">
 		<p> <a href="index.html" class="text-decoration-none">Home</a> / <a href="shop.html" class="text-decoration-none">T-Shirts</a>/ Puma T-Shirt 2121 </p>
 		<div class="row">
@@ -266,9 +280,17 @@
 				</div>
 			</div>
 			<div class="col-12 col-md-4  order-2 order-sm-1">
-				<h4 class="service_header">Puma T-Shirt 2121 dsfa dsaf sdddasf </h4>
+				<h4 class="service_header">Puma T-Shirt 2121 <a href="" class="ps-3"><i class="fa-brands fa-facebook-square fa-sm"></i></a></h4>
 				<h4 class="text-danger service_header">50,000Ks</h4>
-				<p>Brand : Puma</p>
+				<div class="mb-3">
+					<label for="" class="form-label d-inline service_header">For Wholesale</label>
+					<select class="form-select w-50 d-inline" name="" id="">
+						<option selected>Choose One</option>
+						<option value="">Share Item</option>
+						<option value="">Choice Item</option>
+					</select>
+				</div>
+				<!-- <p>Brand : Puma</p> -->
 				<p class="my-2">Color:</p>
 				<img src="images/detail/8.jpg" class="mb-2" style="width: 50px;height: 40px;border-radius: 3px;">
 				<img src="images/detail/5.jpg" class="mb-2" style="width: 50px;height: 40px;border-radius: 3px;">
@@ -281,6 +303,40 @@
 				<button class="btn btn-outline-danger btn-sm" style="width: 40px;">L</button>
 				<button class="btn btn-outline-danger btn-sm" style="width: 40px;">XL</button>
 				<button class="btn btn-outline-danger btn-sm" style="width: 40px;">XXL</button>
+				<div class="row row-cols-5 mt-4">
+					<div class="col">
+						<small> ( cm )</small>
+					</div>
+					<div class="col">
+						<small>Neck</small>
+					</div>
+					<div class="col">
+						<small>Chest</small>
+					</div>
+					<div class="col">
+						<small>Waist</small>
+					</div>
+					<div class="col">
+						<small>Seat</small>
+					</div>
+					<div class="col">
+						<small class="text-center d-block">M</small>
+					</div>
+					<div class="col">
+						<small>38-40</small>
+					</div>
+					<div class="col">
+						<small>97-105</small>
+					</div>
+					<div class="col">
+						<small>82-90 </small>
+					</div>
+					<div class="col">
+						<small>101-109</small>
+					</div>
+					
+				</div>
+
 				<!-- <button class="btn btn-primary"><a href="cart.html" class="text-decoration-none text-white">Buy Now</a></button> -->
 				<p class="my-3">Quality</p>
 				<button class="border-0">-</button><input type="text" value="1" class="form-control d-inline mx-3 text-center" style="width: 15%;"><button class="border-0">+</button> <span>Only available 5</span>

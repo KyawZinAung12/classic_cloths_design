@@ -90,7 +90,41 @@
 				$('.ladies_sub').hide();
 				$('.kids_sub').hide();
 			});
-			
+			// laptop size delivery
+			$('#delivery').hide();
+			$('#confirm').hide();
+			$('#checkout').click(function(){
+				$('#delivery').show();
+				$('#confirm').show();
+				$('#checkout').hide();
+			})
+			$('.advance_sevice').hide();
+			$('#cash').click(function(){
+				$('.advance_sevice').show();
+
+			})
+			$('#home').click(function(){
+				$('.advance_sevice').hide();
+
+			})
+			// phone size delivery
+			$('#delivery_phonesize').hide();
+			$('#confirm_phonesize').hide();
+			$('#checkout_phonesize').click(function(){
+				$('#delivery_phonesize').show();
+				$('#confirm_phonesize').show();
+				$('#checkout_phonesize').hide();
+			})
+
+			$('.advance_sevice').hide();
+			$('#cash_phonesize').click(function(){
+				$('.advance_sevice').show();
+
+			})
+			$('#home_phonesize').click(function(){
+				$('.advance_sevice').hide();
+
+			})
 		});
 			
 	</script>
@@ -142,7 +176,7 @@
 			</div>
 	  </div>
   </nav>
-  <nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark background_nav mt-0 service_header sticky-top py-0">
 	<div class="container">
 	  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -152,7 +186,7 @@
 		<ul class="navbar-nav">
 		  
 		  
-		  <li class="nav-item dropdown">
+		  <li class="nav-item dropdown py-2">
 			<a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
 			  Products
 			</a>
@@ -283,11 +317,21 @@
 
 			</ul>
 		  </li>
-		  <li class="nav-item">
+		  <li class="nav-item py-2">
 			<a class="nav-link nav_link" aria-current="page" href="brand.html"> Brands</a>	          
 		  </li>
-		  <li class="nav-item">
+		  <li class="nav-item py-2">
 			<a class="nav-link nav_link" aria-current="page" href="promotion.html" >Promotions</a>
+		  </li>
+		  <li class="nav-item py-2">
+			<a class="nav-link nav_link" aria-current="page" href="activity.html" >Activity</a>
+		  </li>
+		  <li class="nav-item py-2">
+			<a class="nav-link nav_link" aria-current="page" href="about.html" >About</a>
+		  </li>
+		
+		  <li class="nav-item py-2">
+			<a class="nav-link nav_link" aria-current="page" href="contact.html">Contact</a>
 		  </li>
 		</ul>
 	  </div>
@@ -409,10 +453,79 @@
                         <h6 class="service_header float-end">410000</h6>
                     </div>
                 </div>
-                <hr>
+                <hr>               
 
-                <a href="shop.html" class="text-decoration-none py-4 text-success"><- Continue Shopping</a>
-                <a href="register.html"><button class="btn btn-danger float-end btn-sm">Check Out</button></a>
+
+				<div class="row my-5" id="delivery">
+					<h3>Delivery Fees</h3>
+					<div class="col-12 col-md-6 my-2">
+						<label for="name">Name</label>
+						<input type="text" value="Kyaw Zin Aung" class="form-control" id="name">
+					</div>
+					<div class="col-12 col-md-6 my-2">
+						<label for="phone">Phone</label>
+						<input type="number" value="09968962449" class="form-control" id="phone">
+					</div>
+					<div class="col-12 col-md-6 my-2">
+						<label for="address">Address</label>
+						<select class="form-select" aria-label="Default select example">
+							<option value="0">Choose One Address</option>
+							<option value="1">Yangon</option>
+							<option value="2">Nay Pyi Taw</option>
+							<option value="3">Mandalay</option>
+						</select>
+					</div>
+					<div class="col-12 col-md-6 my-2">
+						<label for="address">Delivary Fees</label>
+						<select class="form-select" aria-label="Default select example">
+							<option value="1">Insein (Fees - 1500)</option>
+							<option value="2">Nay Pyi Taw (Fees - 6000)</option>
+							<option value="3">Mandalay (Fees - 10000)</option>
+						</select>
+					</div>
+					<div class="col-12 my-2">
+						<textarea name="" class="form-control" placeholder="Insein ,ThanLan ,MTP Condo ,7(B)Floor (or) Car Gate Down"></textarea>					
+					</div>
+					<div class="row my-3">
+						<div class="col-8">
+							<h6 class="service_header">Sub Total + Delivery Fees</h6>
+						</div>
+						<div class="col-4">
+							<h6 class="service_header float-end">411500</h6>
+						</div>
+					</div>
+					<hr>
+					<h3 class="my-3">Payment Method</h3>
+					<div class="col-12 col-md-6 my-2">
+						<input type="radio" class="cash"  id="cash" name="deliveryoption" >
+						<label for="cash">Advance Payment(ငွေကြိုလွှဲ)</label>
+
+					</div>
+					<div class="col-12 col-md-6 my-2">
+						<input type="radio" class="home"  id="home" name="deliveryoption">
+						<label for="home">Home Delivery(အိမ်အရောက်ငွေချေ)</label>
+					</div>
+
+					<div class="col-12 col-md-6 my-3 advance_sevice">
+						<label for="bank">Choose Bank</label>
+						<select class="form-select" aria-label="Default select example">
+							<option value="1">09968962449 (KBZ Pay)</option>
+							<option value="2">09968962449 (CB Pay)</option>
+							<option value="3">09968962449 (AYA Pay)</option>
+						</select>
+					</div>
+
+					<div class="col-12 col-md-6 my-3 advance_sevice">
+						<label for="slip">Payment Slip</label>
+						<input type="file"  id="slip" class="form-control-file my-2 d-block">
+					</div>
+
+					
+				</div>
+
+				<a href="shop.html" class="text-decoration-none py-4 text-success"><- Continue Shopping</a>
+                <button class="btn btn-danger float-end btn-sm" id="checkout">Check Out</button>
+                <button class="btn btn-success float-end btn-sm" id="confirm">Confirm</button>
             </div>
         </div>
     </div>
@@ -524,9 +637,79 @@
             </div>
             <hr>
         </div>
+
+
+		<div class="row my-5" id="delivery_phonesize">
+			<h3>Delivery Fees</h3>
+			<div class="col-12 col-md-6 my-2">
+				<label for="name">Name</label>
+				<input type="text" value="Kyaw Zin Aung" class="form-control" id="name">
+			</div>
+			<div class="col-12 col-md-6 my-2">
+				<label for="phone">Phone</label>
+				<input type="number" value="09968962449" class="form-control" id="phone">
+			</div>
+			<div class="col-12 col-md-6 my-2">
+				<label for="address">Address</label>
+				<select class="form-select" aria-label="Default select example">
+					<option value="0">Choose One Address</option>
+					<option value="1">Yangon</option>
+					<option value="2">Nay Pyi Taw</option>
+					<option value="3">Mandalay</option>
+				</select>
+			</div>
+			<div class="col-12 col-md-6 my-2">
+				<label for="address">Delivary Fees</label>
+				<select class="form-select" aria-label="Default select example">
+					<option value="1">Insein (Fees - 1500)</option>
+					<option value="2">Nay Pyi Taw (Fees - 6000)</option>
+					<option value="3">Mandalay (Fees - 10000)</option>
+				</select>
+			</div>
+			<div class="col-12 my-2">
+				<textarea name="" class="form-control" placeholder="Insein ,ThanLan ,MTP Condo ,7(B)Floor (or) Car Gate Down"></textarea>					
+			</div>
+			<div class="row my-3">
+				<div class="col-8">
+					<h6 class="service_header">Sub Total + Delivery Fees</h6>
+				</div>
+				<div class="col-4">
+					<h6 class="service_header float-end">411500</h6>
+				</div>
+			</div>
+			<hr>
+			<h3 class="my-3">Payment Method</h3>
+			<div class="col-12 col-md-6 my-2">
+				<input type="radio" id="cash_phonesize" name="deliveryoption" >
+				<label for="cash_phonesize">Advance Payment(ငွေကြိုလွှဲ)</label>
+
+			</div>
+			<div class="col-12 col-md-6 my-2">
+				<input type="radio"  id="home_phonesize" name="deliveryoption">
+				<label for="home_phonesize">Home Delivery(အိမ်အရောက်ငွေချေ)</label>
+			</div>
+
+			<div class="col-12 col-md-6 my-3 advance_sevice">
+				<label for="bank">Choose Bank</label>
+				<select class="form-select" aria-label="Default select example">
+					<option value="1">09968962449 (KBZ Pay)</option>
+					<option value="2">09968962449 (CB Pay)</option>
+					<option value="3">09968962449 (AYA Pay)</option>
+				</select>
+			</div>
+
+			<div class="col-12 col-md-6 my-3 advance_sevice">
+				<label for="slip">Payment Slip</label>
+				<input type="file"  id="slip" class="form-control-file my-2 d-block">
+			</div>
+
+			
+		</div>
         
         <a href="shop.html" class="text-decoration-none py-4 text-success"><- Continue Shopping</a>
-        <a href="register.html"><button class="btn btn-danger float-end btn-sm">Check Out</button></a>
+        <!-- <a href="#"><button class="btn btn-danger float-end btn-sm">Check Out</button></a> -->
+		<button class="btn btn-danger float-end btn-sm" id="checkout_phonesize">Check Out</button>
+        <button class="btn btn-success float-end btn-sm" id="confirm_phonesize">Confirm</button>
     </div>
 
     <div style="background-color: #ebebeb;">
@@ -581,3 +764,53 @@
 	
 </body>
 </html>
+
+
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">Delivery</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+		  <div class="container">
+			<div class="row">
+				<div class="col-12 my-2">
+					<label for="name">Name</label>
+					<input type="text" value="Kyaw Zin Aung" class="form-control" id="name">
+				</div>
+				<div class="col-12 my-2">
+					<label for="phone">Phone</label>
+					<input type="number" value="09968962449" class="form-control" id="phone">
+				</div>
+				<div class="col-12 my-2">
+					<label for="address">Address</label>
+					<select class="form-select" aria-label="Default select example">
+						<option value="0">Choose One Address</option>
+						<option value="1">Yangon</option>
+						<option value="2">Nay Pyi Taw</option>
+						<option value="3">Mandalay</option>
+					</select>
+				</div>
+				<div class="col-12 my-2">
+					<label for="address">Delivary Fees</label>
+					<select class="form-select" aria-label="Default select example">
+						<option value="1">Insein (Fees - 1500)</option>
+						<option value="2">Nay Pyi Taw</option>
+						<option value="3">Mandalay</option>
+					</select>
+				</div>
+				<div class="col-12 my-2">
+					<textarea name="" class="form-control" placeholder="Insein ,ThanLan ,MTP Condo ,7(B)Floor "></textarea>					
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-success">Save</button>
+		</div>
+	  </div>
+	</div>
+  </div> -->
